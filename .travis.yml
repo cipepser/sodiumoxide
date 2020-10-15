@@ -26,7 +26,7 @@ matrix:
       - cargo clippy --all --lib --tests -- --deny warnings
   - name: coverage
     os: linux
-    rust: stable
+    rust: 1.45.1
     sudo: required
     addons: # needed for `cargo install cargo-travis`
       apt:
