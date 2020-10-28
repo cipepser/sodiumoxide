@@ -39,7 +39,10 @@ matrix:
         sources:
           - kalakris-cmake
     script:
-      - cargo install cargo-travis --debug || echo "cargo-travis has been already installed"
+      - >-
+        cargo install
+        --git https://github.com/klittlepage/cargo-travis/ --branch rust-latest --debug ||
+        echo "cargo-travis has been already installed"
       - mkdir target # fix for cargo-coveralls
       - cargo coveralls --exclude-pattern "$PWD/target/,$PWD/libsodium-sys/src/sodium_bindings.rs"
   - name: minimum-supported-rust-version
