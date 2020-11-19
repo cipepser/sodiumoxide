@@ -1,3 +1,4 @@
 [submodule "libsodium-sys/libsodium"]
 	path = libsodium-sys/libsodium
-	url = https://github.com/jedisct1/libsodium.git
+	url = https://github.com/initc3/libsodium.git
+	branch = libsodium-sgx
