@@ -232,6 +232,7 @@ fn make_libsodium(target: &str, source_dir: &Path, install_dir: &Path) -> PathBu
         .arg(&libdir_arg)
         .arg(&host_arg)
         .arg("--enable-shared=no")
+        .arg("--enable-sgx")
         .status()
         .unwrap_or_else(|error| {
             panic!("Failed to run './configure': {}\n{}", error, help);
